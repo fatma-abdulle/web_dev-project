@@ -1,51 +1,97 @@
-#header{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:20px 80px;
-    background:white;
-    box-shadow:0 5px 15px rgba(0,0,0,0.06);
-    z-index:999;
-    position:sticky;
-    top:0;
-    left:0;
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #EDB6C1;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #EDB6C1;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-#navbar{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    width:100%;
-    height:40px;
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-#navbar li {
-    list-style:none;
-    padding:0 20px;
-    position:relative;
+
+.logo-icon {
+    width: 35px;
+    height: 35px;
+    background: #ff6b9d;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
 }
-#navbar li a{
-    text-decoration:none;
-    font-size:16px;
-    font-weight:600;
-    color: black;
-    transition:0.3s ease;
+
+.logo-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2d3748;
 }
-#navbar li a:hover{
-    color:white;
+
+.search-container {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 40px;
+    position: relative;
 }
-#navbar li a:hover,
-#navbar li a.active{
-    color: #edb6c1;
+
+.search-bar {
+    width: 100%;
+    padding: 12px 20px 12px 45px;
+    border: 2px solid rgba(255, 107, 157, 0.2);
+    border-radius: 25px;
+    background: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
 }
-#navbar li a.active::after,
-#navbar li a:hover::after {
-    content:"";
-    width:30%;
-    height:2px;
-    background: #edb6c1;
-    position:absolute;
-    bottom:-4px;
-    left:20px;
+
+.search-bar:focus {
+    border-color: #ff6b9d;
+    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.1);
 }
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #a0aec0;
+    font-size: 16px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-icon, .account-btn {
+    padding: 10px 15px;
+    border: 2px solid #ff6b9d;
+    border-radius: 20px;
+    background: white;
+    color: #ff6b9d;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.cart-icon:hover, .account-btn:hover {
+    background: #ff6b9d;
+    color: white;
+}
+
 #product1{
     text-align: center;
 }
@@ -143,104 +189,7 @@
     font-size: 16px;
     color: inherit;
 }
-footer{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    background-color:#edced5;
-}
-footer .col{
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
-    margin-bottom:20px;
-}
-footer .logo{
-    margin-bottom:30px;
-}
-footer h4{
-    font-size:14px;
-    padding-bottom:20px;
-}
-footer p{
-    font-size:13px;
-    margin:0 0 8px 0;
-}
-footer a{
-    font-size:13px;
-    text-decoration:none;
-    color:black;
-    margin-bottom:10px;
-}
-footer .col i{
-    color:black;
-    padding-right:4px;
-    cursor:pointer;
-}
-footer .col  img{
-    margin:10px 0 15px 0;
-}
-footer .col i:hover,
-footer a:hover{
-    color : #df1d49;
-}
-footer .copyright{
-    width:100%;
-    text-align:center;
-}
-.single-pro-image{
-    width:30%;
-    margin-right:50px;
-}
-#newsletter{
-    display:flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
-    align-items:center;
-    /*background-image:url("Img2/p4.jpg");*/
-    background-repeat:no-repeat;
-    background-position:20% 30%;
-    background-color: #edb6c1;
-}
-#newsletter h4{
-    font-size:22px;
-    font-weight:700;
-    color:black;
 
-}
-#newsletter p{
-    font-size:14px;
-    font-weight:600;
-    color: #ede5e5;
-
-}
-#newsletter p span{
-    color: #000000;
-}
-#newsletter input{
-    height:3.125rem;
-    padding:0 1.25em;
-    font-size:14px;
-    width:100%;
-    border:1px solid transparent;
-    border-radius:4px;
-    outline:none;
-    border-top-right-radius:0;
-    border-bottom-right-radius:0;
-
-}
-#newsletter button{
-    background-color: #d85376;
-    color: white;
-    white-space:nowrap;
-    border-top-left-radius:0;
-    border-bottom-left-radius:0;
-
-}
-#newsletter .form{
-    display:flex;
-    width:40%;
-}
 /* chat Box
 * {
     margin: 0;
