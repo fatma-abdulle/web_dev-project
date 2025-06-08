@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('background 1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Overlay to make text more readable */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(237, 182, 193, 0.6);  /* Semi-transparent overlay with your brand color */
+  z-index: 0;
+}
+
+.auth-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  z-index: 1;  /* Bring content above the overlay */
+}
+
+.auth-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.auth-box h2 {
+  margin-bottom: 10px;
+  color: #EDB6C1;
+}
+
+.auth-box p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.auth-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.auth-box input[type="email"],
+.auth-box input[type="password"],
+.auth-box input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.auth-box button {
+  background-color: #EDB6C1;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.auth-box button:hover {
+  background-color: #dc9cac;
+}
+
+.auth-box .form-actions {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.auth-box .form-actions a {
+  text-decoration: none;
+  color: #EDB6C1;
+}
+
+.auth-box .form-terms {
+  font-size: 13px;
+}
+
+.auth-box .form-terms a {
+  color: #EDB6C1;
+  text-decoration: none;
+}
+
+.auth-box .switch {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-box .switch a {
+  color: #EDB6C1;
+  font-weight: bold;
+  text-decoration: none;
+}
