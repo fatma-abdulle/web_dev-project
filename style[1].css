@@ -656,4 +656,25 @@ footer .copyright {
   background-color: #e73370;
 }
 
-        
+        .account-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.account-menu i {
+  font-size: 18px;
+  color: #ff4081;
+}
+
+.account-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.account-link:hover {
+  color: #ff4081;
+}
