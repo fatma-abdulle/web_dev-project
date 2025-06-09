@@ -1,13 +1,13 @@
 * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
-            min-height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%);
+        min-height: 100vh;
         }
 
         /* Header Styles */
@@ -121,7 +121,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('images/Розовый фон.jpeg');
+            background-image: url('https://i.pinimg.com/736x/bd/95/fc/bd95fc4335fa697ef138e28f620e8076.jpg');
             background-size: cover;
             background-position: center;
             pointer-events: none;
@@ -211,7 +211,7 @@
         .product-image1{
             width: 100%;
             height: 200px;
-            background-image: url('images/choco.jpeg');
+            background-image: url('https://i.pinimg.com/736x/fc/39/bc/fc39bcb6b75010e028f88555ee9a7588.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -225,7 +225,7 @@
         .product-image2{
             width: 100%;
             height: 200px;
-            background-image: url('images/download (36).jpeg');
+            background-image: url('https://i.pinimg.com/736x/2d/53/02/2d5302ac17eda7f18d52963ad0eeb887.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -239,7 +239,7 @@
         .product-image3{
             width: 100%;
             height: 200px;
-            background-image: url('images/download (38).jpeg');
+            background-image: url('https://i.pinimg.com/736x/dc/48/ee/dc48ee1d9e639a4d3d521c3ceae1d692.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
