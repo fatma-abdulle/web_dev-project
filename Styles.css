@@ -89,3 +89,18 @@ header p {
 .hidden {
     display: none;
 }
+.back-home {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #EDB6C1; /* your theme color */
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.back-home:hover {
+  background-color: #d99eac; /* slightly darker for hover effect */
+}
