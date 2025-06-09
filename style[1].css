@@ -640,5 +640,41 @@ footer .copyright {
   text-decoration: none;
 }
 
- 
-        
+ .back-home {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #ff4081;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-home:hover {
+  background-color: #e73370;
+}
+
+        .account-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.account-menu i {
+  font-size: 18px;
+  color: #ff4081;
+}
+
+.account-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.account-link:hover {
+  color: #ff4081;
+}

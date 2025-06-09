@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fce4ec;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #EDB6C1;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1.2em;
+}
+
+.gift-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.gift-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 280px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.price {
+    color: #EDB6C1;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.add-to-cart, .view-options {
+    background: linear-gradient(to right, #EDB6C1, #f78ca0);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 8px 16px;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+.add-to-cart:hover, .view-options:hover {
+    background: linear-gradient(to right, #f78ca0, #EDB6C1);
+}
+
+.options {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.option-box {
+    background-color: #EDB6C1;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.option-box:hover {
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+.back-home {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #EDB6C1; /* your theme color */
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.back-home:hover {
+  background-color: #d99eac; /* slightly darker for hover effect */
+}

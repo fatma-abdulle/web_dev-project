@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <a href="index[1].html" class="back-home">← Back</a>
+  <meta charset="UTF-8">
+  <title>Browse Gifts - Gift Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+   body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('images/backgroundthree.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: white;
+    }
+    .gift-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gift-card {
+      background-color: white;
+      border-radius: 15px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .gift-card:hover {
+      transform: translateY(-5px);
+    }
+    .gift-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .gift-card h3 {
+      margin: 10px 0;
+      color: #333;
+    }
+    .gift-card button {
+      background-color: #EDB6C1;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .gift-card button:hover {
+      background-color: #d99aad;
+    }
+    .hidden {
+      display: none;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      background: #fff;
+      color: #EDB6C1;
+      border: 2px solid #EDB6C1;
+      padding: 8px 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .back-btn:hover {
+      background: #EDB6C1;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Browse Gifts</h1>
+    <div id="mainGrid" class="gift-grid">
+      <!-- Main gift categories -->
+      <div class="gift-card" onclick="showOptions('teddy')">
+        <img src="Images/Mini Travel bear.jpg" alt="Teddy Bear">
+        <h3>Cute Teddy Bears</h3>
+        <button>View Options</button>
+      </div>
+      <div class="gift-card" onclick="showOptions('flowers')">
+        <img src="Images/main flower.jpg" alt="Flower Bouquets">
+        <h3>Flower Bouquets</h3>
+        <button>View Options</button>
+      </div>
+      <div class="gift-card" onclick="showOptions('perfumes')">
+        <img src="Images/Perfumes.jpg" alt="Perfumes">
+        <h3>Perfumes</h3>
+        <button>View Options</button>
+      </div>
+      <div class="gift-card" onclick="showOptions('chocolates')">
+        <img src="Images/chocolates.jpg" alt="Chocolates">
+        <h3>Chocolates</h3>
+        <button>View Options</button>
+      </div>
+      <div class="gift-card" onclick="showOptions('mugs')">
+        <img src="Images/Custom Mugs.jpg" alt="Custom Mugs">
+        <h3>Custom Mugs</h3>
+        <button>View Options</button>
+      </div>
+      <div class="gift-card" onclick="showOptions('jewelry')">
+        <img src="Images/Jewelery Set.jpg" alt="Jewelry Sets">
+        <h3>Jewelry Sets</h3>
+        <button>View Options</button>
+      </div>
+    </div>
+
+    <!-- Teddy Bear Options -->
+    <div id="teddy" class="gift-grid hidden">
+      <div class="gift-card">
+        <img src="Images/Classic brown teddy bear.jpg" alt="Classic Brown Bear">
+        <h3>Classic Brown Bear</h3>
+        <button onclick="addToCart('Classic Brown Bear')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/Fluffy pink bear.jpg" alt="Fluffy Pink Bear">
+        <h3>Fluffy Pink Bear</h3>
+        <button onclick="addToCart('Fluffy Pink Bear')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/white teddy-bears.jpg" alt="white teddy">
+        <h3>white teddy</h3>
+        <button onclick="addToCart('white teddy')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/purple teddy.jpg" alt="purple teddy">
+        <h3>purple teddy</h3>
+        <button onclick="addToCart('purple teddy')">Add to Cart</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">← Back to Gifts</button>
+    </div>
+
+    <!-- Flower Options -->
+    <div id="flowers" class="gift-grid hidden">
+      <div class="gift-card">
+        <img src="Images/flower one.jpg" alt="flower 1">
+        <h3>Flower Bouquet 1</h3>
+        <button onclick="addToCart('flower 1')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/flower two.jpg" alt="Flower 2">
+        <h3>Flower  2</h3>
+        <button onclick="addToCart('Flower 2')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/flower three.jpg" alt="Flower 3">
+        <h3>Flower  3</h3>
+        <button onclick="addToCart('Flower 3')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/flower four.jpg" alt="Flower 4">
+        <h3>Flower  4</h3>
+        <button onclick="addToCart('Flower 4')">Add to Cart</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">← Back to Gifts</button>
+    </div>
+
+    <!-- Perfume Options -->
+    <div id="perfumes" class="gift-grid hidden">
+      <div class="gift-card">
+        <img src="Images/Perfume 1.jpg" alt="Perfume 1">
+        <h3>Perfume 1</h3>
+        <button onclick="addToCart('Perfume 1')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/perfume 2.jpg" alt="Perfume 2">
+        <h3>Perfume 2</h3>
+        <button onclick="addToCart('Perfume 2')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/perfume 3.jpg" alt="Perfume 3">
+        <h3>Perfume 3</h3>
+        <button onclick="addToCart('Perfume 3')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/perfume 4.jpg" alt="Perfume 4">
+        <h3>Perfume 4</h3>
+        <button onclick="addToCart('Perfume 4')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/perfume 5.jpg" alt="Perfume 5">
+        <h3>Perfume 5</h3>
+        <button onclick="addToCart('Perfume 5')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/perfume 7.jpg" alt="Perfume 6">
+        <h3>Perfume 6</h3>
+        <button onclick="addToCart('Perfume 6')">Add to Cart</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">← Back to Gifts</button>
+    </div>
+
+    <!-- Chocolates Options -->
+    <div id="chocolates" class="gift-grid hidden">
+      <div class="gift-card">
+        <img src="Images/Option 1.jpg" alt="Chocolate Box 1">
+        <h3>Chocolate Box 1</h3>
+        <button onclick="addToCart('Chocolate Box 1')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/option 2.jpg" alt="Chocolate Box 2">
+        <h3>Chocolate Box 2</h3>
+        <button onclick="addToCart('Chocolate Box 2')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/Option 3.jpg" alt="Chocolate Box 3">
+        <h3>Chocolate Box 3</h3>
+        <button onclick="addToCart('Chocolate Box 3')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/Option 4.jpg" alt="Chocolate Box 4">
+        <h3>Chocolate Box 4</h3>
+        <button onclick="addToCart('Chocolate Box 4')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/option 6.jpg" alt="Chocolate Box 5">
+        <h3>Chocolate Box 5</h3>
+        <button onclick="addToCart('Chocolate Box 5')">Add to Cart</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">← Back to Gifts</button>
+    </div>
+
+    <!-- Custom Mugs Options -->
+    <div id="mugs" class="gift-grid hidden">
+      <div class="gift-card">
+        <img src="Images/mug 2.jpg" alt="Mug 1">
+        <h3>Mug 1</h3>
+        <button onclick="addToCart('Mug 1')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/mug 3.jpg" alt="Mug 2">
+        <h3>Mug 2</h3>
+        <button onclick="addToCart('Mug 2')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/mug 4.jpg" alt="Mug 3">
+        <h3>Mug 3</h3>
+        <button onclick="addToCart('Mug 3')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/mug 5.jpg" alt="Mug 5">
+        <h3>Mug 5</h3>
+        <button onclick="addToCart('Mug 5')">Add to Cart</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">← Back to Gifts</button>
+    </div>
+
+    <!-- Jewelry Options -->
+    <div id="jewelry" class="gift-grid hidden">
+      <div class="gift-card">
+        <img src="Images/set 1.jpg" alt="Jewelry Set 1">
+        <h3>Jewelry Set 1</h3>
+        <button onclick="addToCart('Jewelry Set 1')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/set 2.jpg" alt="Jewelry Set 2">
+        <h3>Jewelry Set 2</h3>
+        <button onclick="addToCart('Jewelry Set 2')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/set 3.jpg" alt="Jewelry Set 3">
+        <h3>Jewelry Set 3</h3>
+        <button onclick="addToCart('Jewelry Set 3')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/set 4.jpg" alt="Jewelry Set 4">
+        <h3>Jewelry Set 4</h3>
+        <button onclick="addToCart('Jewelry Set 4')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/set 5.jpg" alt="Jewelry Set 5">
+        <h3>Jewelry Set 5</h3>
+        <button onclick="addToCart('Jewelry Set 5')">Add to Cart</button>
+      </div>
+      <div class="gift-card">
+        <img src="Images/set 6.jpg" alt="Jewelry Set 6">
+        <h3>Jewelry Set 6</h3>
+        <button onclick="addToCart('Jewelry Set 6')">Add to Cart</button>
+      </div>
+      <button class="back-btn" onclick="goBack()">← Back to Gifts</button>
+    </div>
+  </div>
+
+  <script>
+    function showOptions(category) {
+      document.getElementById('mainGrid').classList.add('hidden');
+      document.getElementById(category).classList.remove('hidden');
+    }
+    function goBack() {
+      document.querySelectorAll('.gift-grid').forEach(section => section.classList.add('hidden'));
+      document.getElementById('mainGrid').classList.remove('hidden');
+    }
+    function addToCart(item) {
+      alert(`${item} has been added to your cart!`);
+    }
+  </script>
+</body>
+</html>
