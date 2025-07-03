@@ -153,21 +153,21 @@
       <div class="gift-card">
         <img src="Images/flower one.jpg" alt="flower 1">
         <h3>Flower Bouquet 1</h3>
-        <button onclick="addToCart('flower 1')">Add to Cart</button>
+        <button onclick="addToCart('Flower Bouquet 1')">Add to Cart</button>
       </div>
       <div class="gift-card">
         <img src="Images/flower two.jpg" alt="Flower 2">
-        <h3>Flower  2</h3>
+        <h3>Flower 2</h3>
         <button onclick="addToCart('Flower 2')">Add to Cart</button>
       </div>
       <div class="gift-card">
         <img src="Images/flower three.jpg" alt="Flower 3">
-        <h3>Flower  3</h3>
+        <h3>Flower 3</h3>
         <button onclick="addToCart('Flower 3')">Add to Cart</button>
       </div>
       <div class="gift-card">
         <img src="Images/flower four.jpg" alt="Flower 4">
-        <h3>Flower  4</h3>
+        <h3>Flower 4</h3>
         <button onclick="addToCart('Flower 4')">Add to Cart</button>
       </div>
       <button class="back-btn" onclick="goBack()">← Back to Gifts</button>
@@ -308,8 +308,35 @@
       document.querySelectorAll('.gift-grid').forEach(section => section.classList.add('hidden'));
       document.getElementById('mainGrid').classList.remove('hidden');
     }
-    function addToCart(item) {
-      alert(`${item} has been added to your cart!`);
+    // Improved addToCart function for localStorage cart
+    function addToCart(itemName) {
+      // Find the .gift-card with the matching h3 text
+      let found = null;
+      document.querySelectorAll('.gift-card').forEach(card => {
+        let h3 = card.querySelector('h3');
+        if (h3 && h3.innerText.trim() === itemName) {
+          found = card;
+        }
+      });
+      if (!found) {
+        alert('Item not found!');
+        return;
+      }
+      // Get image src
+      let img = found.querySelector('img') ? found.querySelector('img').getAttribute('src') : '';
+      // If you want to add price, add a price element and extract it here
+      let price = ""; // No price in markup, so leave blank or set manually if needed
+
+      // Get cart from localStorage
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      let existing = cart.find(item => item.name === itemName);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ name: itemName, img: img, price: price, qty: 1 });
+      }
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${itemName} has been added to your cart!`);
     }
   </script>
 </body>
