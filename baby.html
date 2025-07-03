@@ -244,5 +244,38 @@
 
     </div>
 </section>
+<script>
+// filepath: c:\Users\munya\OneDrive\Documents\GiftHub Project\baby.html
+document.querySelectorAll('.pro').forEach(pro => {
+    // Add data attributes if missing
+    if (!pro.hasAttribute('data-name')) {
+        const name = pro.querySelector('h5') ? pro.querySelector('h5').innerText.trim() : '';
+        const priceText = pro.querySelector('h4') ? pro.querySelector('h4').innerText.replace(/[^0-9.]/g, '') : '';
+        const img = pro.querySelector('img') ? pro.querySelector('img').getAttribute('src') : '';
+        pro.setAttribute('data-name', name);
+        pro.setAttribute('data-price', priceText);
+        pro.setAttribute('data-img', img);
+    }
+});
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const pro = this.closest('.pro');
+        const name = pro.getAttribute('data-name');
+        const price = pro.getAttribute('data-price');
+        const img = pro.getAttribute('data-img');
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existing = cart.find(item => item.name === name);
+        if (existing) {
+            existing.qty += 1;
+        } else {
+            cart.push({ name, price, img, qty: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} added to cart!`);
+        // Optionally, redirect to cart page:
+        // window.location.href = 'cart.html';
+    });
+});
+</script>
 </body>
 </html>

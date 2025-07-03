@@ -15,7 +15,7 @@
     <h2>Make a House a Home – Home & Living Gifts</h2>
     <div class="pro-container">
 
-        <div class="pro">
+        <div class="pro" data-name="Abstract Wall Art" data-price="35" data-img="home/h1.jpg">
             <img src="home/h1.jpg" alt="Wall Art">
             <div class="description">
                 <span>Home & Living</span>
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="pro">
+        <div class="pro" data-name="Scented Candle Set" data-price="20" data-img="home/h2.jpg">
             <img src="home/h2.jpg" alt="Scented Candles">
             <div class="description">
                 <span>Home & Living</span>
@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div class="pro">
+        <div class="pro" data-name="Cozy Knit Blanket" data-price="45" data-img="home/h3.jpg">
             <img src="home/h3.jpg" alt="Cozy Blanket">
             <div class="description">
                 <span>Home & Living</span>
@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <div class="pro">
+        <div class="pro" data-name="Premium Kitchen Tool Set" data-price="60" data-img="home/h4.jpg">
             <img src="home/h4.jpg" alt="Kitchen Tools">
             <div class="description">
                 <span>Home & Living</span>
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <div class="pro">
+        <div class="pro" data-name="Decorative Throw Pillows (Set of 2)" data-price="25" data-img="home/h5.jpg">
             <img src="home/h5.jpg" alt="Throw Pillows">
             <div class="description">
                 <span>Home & Living</span>
@@ -90,7 +90,7 @@
             </div>
         </div>
 
-        <div class="pro">
+        <div class="pro" data-name="Ceramic Plant Pot" data-price="18" data-img="home/h6.jpg">
             <img src="home/h6.jpg" alt="Plant Pot">
             <div class="description">
                 <span>Home & Living</span>
@@ -105,7 +105,7 @@
             </div>
         </div>
 
-        <div class="pro">
+        <div class="pro" data-name="Modern Wall Clock" data-price="28" data-img="home/h7.jpg">
             <img src="home/h7.jpg" alt="Clock">
             <div class="description">
                 <span>Home & Living</span>
@@ -120,7 +120,7 @@
             </div>
         </div>
 
-        <div class="pro">
+        <div class="pro" data-name="Minimalist Table Lamp" data-price="32" data-img="home/h8.jpg">
             <img src="home/h8.jpg" alt="Table Lamp">
             <div class="description">
                 <span>Home & Living</span>
@@ -137,5 +137,25 @@
 
     </div>
 </section>
+<script>
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const pro = this.closest('.pro');
+        const name = pro.getAttribute('data-name');
+        const price = pro.getAttribute('data-price');
+        const img = pro.getAttribute('data-img');
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existing = cart.find(item => item.name === name);
+        if (existing) {
+            existing.qty += 1;
+        } else {
+            cart.push({ name, price, img, qty: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} added to cart!`);
+      
+    });
+});
+</script>
 </body>
 </html>
