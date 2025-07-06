@@ -50,70 +50,60 @@
     </section>
     <!-- Featured Products -->
     <section id="featured">
-        <h2 class="section-title">Featured Gifts</h2>
-        <a href="featuredProducts/index.html" target="_blank" class="product-link">
-        <div class="products-grid">
-            <div class="product-card">
-                <div class="product-image1">
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Luxury Chocolate Box</div>
-                    <div class="product-description">A luxurious assortment of premium chocolates, perfect for any occasion.</div>
-                    <div class="product-price">$29.99</div>
-                    <div class="product-actions">
-                        <button class="add-to-cart">
-                            <i class="fas fa-gift"></i>
-                        </button>
-                        <button class="favorite-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </div>
+    <h2 class="section-title">Featured Gifts</h2>
+    <div class="products-grid">
+        <div class="product-card" data-name="Luxury Chocolate Box" data-price="29.99" data-img="images/luxury-chocolate.jpg">
+            <div class="product-image1"></div>
+            <div class="product-info">
+                <div class="product-name">Luxury Chocolate Box</div>
+                <div class="product-description">A luxurious assortment of premium chocolates, perfect for any occasion.</div>
+                <div class="product-price">$29.99</div>
+                <div class="product-actions">
+                    <button class="add-to-cart" onclick="addFeaturedToCart(this)">
+                        <i class="fas fa-gift"></i>
+                    </button>
+                    <button class="favorite-btn">
+                        <i class="far fa-heart"></i>
+                    </button>
                 </div>
             </div>
-            </a>
-
-            <a href="featuredProducts/product2.html" target="_blank" class="product-link">
-            <div class="product-card">
-                <div class="product-image2">
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Scented Candle Set</div>
-                    <div class="product-description">A beautiful set of aromatic candles to create a relaxing atmosphere.</div>
-                    <div class="product-price">$34.99</div>
-                    <div class="product-actions">
-                        <button class="add-to-cart">
-                            <i class="fas fa-gift"></i>
-                        </button>
-                        <button class="favorite-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            </a>
-
-            <a href="featuredProducts/product3.html" target="_blank" class="product-link">
-            <div class="product-card">
-                <div class="product-image3">
-                </div>
-                <div class="product-info">
-                    <div class="product-name">Wellness Gift Basket</div>
-                    <div class="product-description">A curated collection of wellness products for relaxation and self-care</div>
-                    <div class="product-price">$49.99</div>
-                    <div class="product-actions">
-                        <button class="add-to-cart">
-                            <i class="fas fa-gift"></i>
-                        </button>
-                        <button class="favorite-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            </a>
-            
         </div>
-    </section>
+
+        <div class="product-card" data-name="Scented Candle Set" data-price="34.99" data-img="images/scented-candle.jpg">
+            <div class="product-image2"></div>
+            <div class="product-info">
+                <div class="product-name">Scented Candle Set</div>
+                <div class="product-description">A beautiful set of aromatic candles to create a relaxing atmosphere.</div>
+                <div class="product-price">$34.99</div>
+                <div class="product-actions">
+                    <button class="add-to-cart" onclick="addFeaturedToCart(this)">
+                        <i class="fas fa-gift"></i>
+                    </button>
+                    <button class="favorite-btn">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-name="Wellness Gift Basket" data-price="49.99" data-img="images/wellness-basket.jpg">
+            <div class="product-image3"></div>
+            <div class="product-info">
+                <div class="product-name">Wellness Gift Basket</div>
+                <div class="product-description">A curated collection of wellness products for relaxation and self-care</div>
+                <div class="product-price">$49.99</div>
+                <div class="product-actions">
+                    <button class="add-to-cart" onclick="addFeaturedToCart(this)">
+                        <i class="fas fa-gift"></i>
+                    </button>
+                    <button class="favorite-btn">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section class="shop-category-section">
         <h2 class="section-title">Shop by Category</h2>
@@ -215,3 +205,25 @@
         <p>@ 2025 GIFTHUB Ecommerce Platform</p>
     </div>
 </footer>
+
+<script>
+// filepath: c:\Users\munya\OneDrive\Documents\GiftHub Project\index[1].html
+function addFeaturedToCart(btn) {
+    // Find the parent product-card
+    const card = btn.closest('.product-card');
+    const name = card.getAttribute('data-name') || card.querySelector('.product-name').innerText.trim();
+    const price = card.getAttribute('data-price') || card.querySelector('.product-price').innerText.replace(/[^0-9.]/g, '');
+    const img = card.getAttribute('data-img') || '';
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existing = cart.find(item => item.name === name);
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({ name, price, img, qty: 1 });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${name} added to cart!`);
+}
+</script>
+</body>
+</html>
