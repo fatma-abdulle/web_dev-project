@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiftHub</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <span class="logo-text">GIFTHUB</span>
+            </div>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-bar" placeholder="Search for the perfect gift" id="searchInput">
+                <div class="search-suggestions" id="searchSuggestions"></div>
+            </div>
+            
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <div class="account-menu">
+                    <button class="account-btn">
+                        <i class="fas fa-user-circle"></i>
+                        <span>MY ACCOUNT</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="signin.html" class="account-link">Sign In</a>
+                        <a href="signup.html" class="account-link">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <img src="gift/2ac03a431e8d3206b542db950e7224e5.jpg" alt="Hero Background" class="hero-background">
+        <div class="hero-content">
+            <h1>CHOOSE THE PERFECT GIFT</h1>
+            <p>Browse our curated selection of gifts for any occasion and have them delivered directly to your recipient</p>
+            <a href="browse.html" class="browse-link">
+                <button class="browse-btn">BROWSE GIFTS</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured">
+        <div class="container">
+            <h2 class="section-title">FEATURED GIFTS</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="gift/download (38).jpeg" alt="Luxury Chocolate Box">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">Wellness Gift Basket</div>
+                        <div class="product-description">A curated collection of wellness products for relaxation and self-care</div>
+                        <div class="product-price">$49.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <i class="fas fa-gift"></i>
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="gift/fc39bcb6b75010e028f88555ee9a7588.jpg" alt="Scented Candle Set">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">Luxury Chocolate Box</div>
+                        <div class="product-description">A luxurious assortment of premium chocolates, perfect for any occasion.</div>
+                        <div class="product-price">$29.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <i class="fas fa-gift"></i>
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="gift/93b6d4958b67b0a6dc9f1301733576f1.jpg" alt="Gift Set">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">Scented Candle Set</div>
+                        <div class="product-description">A beautiful set of aromatic candles to create a relaxing atmosphere.</div>
+                        <div class="product-price">$34.99</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart">
+                                <i class="fas fa-gift"></i>
+                            </button>
+                            <button class="favorite-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop by Category -->
+    <section class="shop-category-section">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <a href="./birthday.html" class="category-link">
+                    <div class="category-card">
+                        <div class="category-icon birthday"><i class="ri-cake-2-line"></i></div>
+                        <h3 class="category-name">Birthday</h3>
+                    </div>
+                </a>
+
+                <a href="./anniversary.html" class="category-link">
+                    <div class="category-card">
+                        <div class="category-icon anniversary"><i class="ri-home-smile-2-fill"></i></div>
+                        <h3 class="category-name">Baby Shower</h3>
+                    </div>
+                </a>
+
+                <a href="./home-living.html" class="category-link">
+                    <div class="category-card">
+                        <div class="category-icon home"><i class="ri-home-heart-fill"></i></div>
+                        <h3 class="category-name">Home & Living</h3>
+                    </div>
+                </a>
+
+                <a href="./special.html" class="category-link">
+                    <div class="category-card">
+                        <div class="category-icon special"><i class="ri-candle-line"></i></div>
+                        <h3 class="category-name">Special Occasions</h3>
+                    </div>
+                </a>
+
+                <a href="./personalized.html" class="category-link">
+                    <div class="category-card">
+                        <div class="category-icon personalized"><i class="ri-user-heart-fill"></i></div>
+                        <h3 class="category-name">Personalized</h3>
+                    </div>
+                </a>
+
+                <a href="./fashion.html" class="category-link">
+                    <div class="category-card">
+                        <div class="category-icon fashion"><i class="ri-shirt-line"></i></div>
+                        <h3 class="category-name">Fashion</h3>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Need Something Special Section -->
+    <section class="special-section">
+        <div class="container">
+            <div class="special-content">
+                <h2 class="special-title">Need Something Special?</h2>
+                <p class="special-description">
+                    Can't find the perfect gift? Our gift specialists can create custom, personalized gifts tailored to your needs.
+                </p>
+                <a href="./chat.html" class="chat-link">
+                    <button class="chat-specialist-btn">
+                        <i class="fas fa-comments"></i>
+                        Chat with a Gift Specialist
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Section -->
+    <section id="banner" class="bestbanner">
+        <div class="container">
+            <h1>Up to <span>70% off</span> ON All flowers</h1>
+            <a href="browse.html" class="browse-link">
+                <button class="normal">Explore More</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h4>Contact</h4>
+                    <p><strong>Address:</strong> Nairobi Kenya</p>
+                    <p><strong>Phone:</strong> +254 789001234</p>
+                    <p><strong>Hours:</strong> 9:00am—7:00pm, Mon–Sat</p>
+                    <div class="social-section">
+                        <h4>Follow us</h4>
+                        <div class="social-icons">
+                            <i class="fab fa-facebook-f"></i>
+                            <i class="fab fa-twitter"></i>
+                            <i class="fab fa-instagram"></i>
+                            <i class="fab fa-pinterest-p"></i>
+                            <i class="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 GIFTHUB Ecommerce Platform</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="landing.js"></script>
+</body>
+</html>

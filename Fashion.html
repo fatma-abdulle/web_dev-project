@@ -15,7 +15,7 @@
 <section id="product1" class="section-p1">
     <h2>Style your Loved Ones</h2>
     <div class="pro-container">
-        <div class="pro">
+        <div class="pro" data-name="Gold Jewelry" data-price="4" data-img="fashion/i1.jpg">
             <img src="fashion/i1.jpg" alt="Jewelry">
             <div class="description">
                 <span>Fashion</span>
@@ -33,7 +33,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Neckless" data-price="15" data-img="fashion/i2.jpg">
             <img src="fashion/i2.jpg" alt="Neckless">
             <div class="description">
                 <span>Jewelry</span>
@@ -51,7 +51,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Tote Bag" data-price="20" data-img="fashion/i5.jpg">
             <img src="fashion/i5.jpg" alt="Brown bag">
             <div class="description">
                 <span>Fashion</span>
@@ -69,7 +69,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Cardigan" data-price="8" data-img="fashion/i6.jpg">
             <img src="fashion/i6.jpg" alt="Green Cardigan">
             <div class="description">
                 <span>Fashion</span>
@@ -87,7 +87,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Elegant Outfit" data-price="30" data-img="fashion/i7.jpg">
             <img src="fashion/i7.jpg" alt="Completed Outfit">
             <div class="description">
                 <span>Fashion</span>
@@ -105,7 +105,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Brown Scarf" data-price="4" data-img="fashion/i8.jpg">
             <img src="fashion/i8.jpg" alt="Brown scarf">
             <div class="description">
                 <span>Fashion</span>
@@ -123,7 +123,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Heavy Sweater" data-price="10" data-img="fashion/i9.jpg">
             <img src="fashion/i9.jpg" alt="Brown Sweater">
             <div class="description">
                 <span>Fashion</span>
@@ -141,7 +141,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Summer Dress" data-price="12" data-img="fashion/i10.jpg">
             <img src="fashion/i10.jpg" alt="Brown Dress">
             <div class="description">
                 <span>Fashion</span>
@@ -159,7 +159,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Quality Shirt" data-price="11" data-img="fashion/i11.jpg">
             <img src="fashion/i11.jpg" alt="White t-shirt">
             <div class="description">
                 <span>Fashion</span>
@@ -177,7 +177,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Quality Hand bag" data-price="6" data-img="fashion/i12.jpg">
             <img src="fashion/i12.jpg" alt="Pink handBag ">
             <div class="description">
                 <span>Fashion</span>
@@ -196,7 +196,7 @@
             </div>
         </div>
 
-        <div class="pro">
+        <div class="pro" data-name="Mommy bag" data-price="7" data-img="fashion/i13.jpg">
             <img src="fashion/i13.jpg" alt="White bags with letter G">
             <div class="description">
                 <span>Fashion</span>
@@ -214,7 +214,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Quality Watch" data-price="7" data-img="fashion/i14.jpg">
             <img src="fashion/i14.jpg" alt="Gold Watch">
             <div class="description">
                 <span>Fashion</span>
@@ -232,7 +232,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Crop Tops" data-price="3" data-img="fashion/i15.jpg">
             <img src="fashion/i15.jpg" alt="Crop Tops">
             <div class="description">
                 <span>Fashion</span>
@@ -250,7 +250,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Celine pyjamas" data-price="8" data-img="fashion/i18.jpg">
             <img src="fashion/i18.jpg" alt="Collection of Luxury pyjamas">
             <div class="description">
                 <span>Fashion</span>
@@ -268,7 +268,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Coach Wallet" data-price="7" data-img="fashion/i16.jpg">
             <img src="fashion/i16.jpg" alt="Coach Women Wallet">
             <div class="description">
                 <span>Fashion</span>
@@ -286,7 +286,7 @@
                 </button>
             </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-name="Quality Bracelet" data-price="5" data-img="fashion/i17.jpg">
             <img src="fashion/i17.jpg" alt="Gold Bracelet ">
             <div class="description">
                 <span>Jewelry</span>
@@ -306,5 +306,26 @@
         </div>
     </div>
 </section>
+<script>
+
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const pro = this.closest('.pro');
+        const name = pro.getAttribute('data-name');
+        const price = pro.getAttribute('data-price');
+        const img = pro.getAttribute('data-img');
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existing = cart.find(item => item.name === name);
+        if (existing) {
+            existing.qty += 1;
+        } else {
+            cart.push({ name, price, img, qty: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} added to cart!`);
+        
+    });
+});
+</script>
 </body>
 </html>
