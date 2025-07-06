@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<a href="./index[1].html" class="back-home-btn">
+<a href="./landingPage/landing.html" class="back-home-btn">
     <i class="fas fa-arrow-left"></i> Continue Shopping
 </a>
 
@@ -24,7 +24,6 @@
 </section>
 
 <script>
-// filepath: c:\Users\munya\OneDrive\Documents\GiftHub Project\cart.html
 function renderCart() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const container = document.getElementById('cart-container');
@@ -92,6 +91,16 @@ document.addEventListener('click', function(e) {
         cart.splice(idx, 1);
         localStorage.setItem('cart', JSON.stringify(cart));
         renderCart();
+    }
+});
+
+// Update cart count on page load
+document.addEventListener('DOMContentLoaded', function() {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let count = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
+    let cartCountElem = document.querySelector('.cart-count');
+    if (cartCountElem) {
+        cartCountElem.textContent = count;
     }
 });
 
