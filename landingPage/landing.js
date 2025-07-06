@@ -97,27 +97,27 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Cart functionality
-    let cartCount = 0;
-    const cartCountElement = document.querySelector('.cart-count');
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+    // // Cart functionality
+    // let cartCount = 0;
+    // const cartCountElement = document.querySelector('.cart-count');
+    // const addToCartButtons = document.querySelectorAll('.add-to-cart');
     
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            cartCount++;
-            cartCountElement.textContent = cartCount;
+    // addToCartButtons.forEach(button => {
+    //     button.addEventListener('click', function(e) {
+    //         e.preventDefault();
+    //         cartCount++;
+    //         cartCountElement.textContent = cartCount;
             
-            // Add animation effect
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 150);
+    //         // Add animation effect
+    //         this.style.transform = 'scale(0.95)';
+    //         setTimeout(() => {
+    //             this.style.transform = 'scale(1)';
+    //         }, 150);
             
-            // Show confirmation message
-            showNotification('Item added to cart!');
-        });
-    });
+    //         // Show confirmation message
+    //         showNotification('Item added to cart!');
+    //     });
+    // });
     
     // Favorite functionality
     const favoriteButtons = document.querySelectorAll('.favorite-btn');
