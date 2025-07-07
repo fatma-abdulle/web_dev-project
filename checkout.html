@@ -94,7 +94,7 @@
     </style>
 </head>
 <body>
-<a href="cart.html" class="back-home-btn"><i class="fas fa-arrow-left"></i> Back to Cart</a>
+<a href="./Cart Section/cart.html" class="back-home-btn"><i class="fas fa-arrow-left"></i> Back to Cart</a>
 <section class="checkout-section">
     <h2 style="color:#ED3A6A; text-align:center; margin-bottom:28px;">Checkout</h2>
     <form id="checkout-form">
@@ -138,7 +138,7 @@ document.getElementById('checkout-form').addEventListener('submit', function(e) 
     e.preventDefault();
     alert('Thank you for your order!');
     localStorage.removeItem('cart');
-    window.location.href = 'index[1].html';
+    window.location.href = 'landingPage/landing.html';
 });
 </script>
 </body>
