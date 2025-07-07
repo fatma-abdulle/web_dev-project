@@ -10,13 +10,11 @@
     top: 0;
     z-index: 1000;
 }
-
 .logo-section {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .logo-icon {
     width: 35px;
     height: 35px;
@@ -119,7 +117,7 @@
     font-size: 16px;
 }
 
-
+/* Product */
 #product1{
     text-align: center;
 }
@@ -185,7 +183,7 @@
 }
 .add-to-cart {
     width: auto;                        /* Fit content width */
-    height: 40px;                       /* Match height from first example */
+    height: 40px;
     line-height: 40px;                  /* Vertically center text */
     padding: 0 14px;                    /* Horizontal padding for text */
     border-radius: 50px;                /* Make it pill-shaped */
@@ -218,14 +216,14 @@
     color: inherit;
 }
 
-/* chat Box
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+#Chat-page {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     background-color: #f3f4f6;
     min-height: 100vh;
@@ -353,5 +351,126 @@ body {
 .send-button:hover {
     background-color: #e5a7b4;
 }
+/* ========================
+   RESPONSIVE MEDIA QUERIES
+=========================== */
 
-*/
+/* For tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    #header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-container {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .header-actions {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #product1 .pro {
+        width: 45%;
+    }
+
+    .chat-header h2 {
+        font-size: 20px;
+    }
+}
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+    #header {
+        padding: 10px 15px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-section {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    #product1 .pro-container {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #product1 .pro {
+        width: 80%;
+        max-width: 90%;
+    }
+
+    .chat-container {
+        margin: 0 10px;
+    }
+
+    .chat-header h2 {
+        font-size: 18px;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    .send-button {
+        width: 100%;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+
+    .back-home-btn {
+        top: 10px;
+        left: 10px;
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+}
+
+/* For very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .chat-header h2 {
+        font-size: 16px;
+    }
+
+    .message-content {
+        font-size: 14px;
+    }
+
+    .message-text {
+        font-size: 16px;
+    }
+
+    .message-time {
+        font-size: 12px;
+    }
+
+    .add-to-cart {
+        font-size: 12px;
+        padding: 0 10px;
+        height: 36px;
+    }
+}
+
+
