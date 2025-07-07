@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birthday Gifts</title>
+    <link rel="stylesheet" href="Mey.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+</head>
+<body>
+<a href="landingPage/landing.html" class="back-home-btn" title="Back to Home">
+    <i class="fas fa-arrow-left"></i> Home
+</a>
+
+<section id="product1" class="section-p1">
+    <h2>Celebrate with Birthday Gifts</h2>
+    <div class="pro-container">
+
+        <div class="pro">
+            <img src="birthday/b1.jpg" alt="Birthday Cake">
+            <div class="description">
+                <span>Birthday</span>
+                <h5>Chocolate Birthday Cake</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h4>$25</h4>
+                <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="pro">
+            <img src="birthday/b2.jpg" alt="Birthday Balloons">
+            <div class="description">
+                <span>Birthday</span>
+                <h5>Birthday Balloon Set</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h4>$10</h4>
+                <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="pro">
+            <img src="birthday/b3.jpg" alt="Gift Box">
+            <div class="description">
+                <span>Birthday</span>
+                <h5>Luxury Gift Box</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$40</h4>
+                <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="pro">
+            <img src="birthday/b4.jpg" alt="Birthday Candle">
+            <div class="description">
+                <span>Birthday</span>
+                <h5>Scented Birthday Candle</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h4>$5</h4>
+                <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="pro">
+            <img src="birthday/b5.jpg" alt="Birthday Mug">
+            <div class="description">
+                <span>Birthday</span>
+                <h5>Custom Birthday Mug</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h4>$12</h4>
+                <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="pro">
+            <img src="birthday/b6.jpg" alt="Teddy Bear">
+            <div class="description">
+                <span>Birthday</span>
+                <h5>Cute Teddy Bear</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h4>$15</h4>
+                <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="pro">
+            <img src="birthday/b7.jpg" alt="Birthday Card">
+            <div class="description">
+                <span>Birthday</span>
+                <h5>Personalized Greeting Card</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <h4>$4</h4>
+                <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="pro">
+            <img src="birthday/b8.jpg" alt="Party Pack">
+            <div class="description">
+                <span>Birthday</span>
+                <h5>Birthday Party Pack</h5>
+                <div class="star">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>$30</h4>
+                <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+<script>
+
+document.querySelectorAll('.pro').forEach(pro => {
+   
+    if (!pro.hasAttribute('data-name')) {
+        const name = pro.querySelector('h5') ? pro.querySelector('h5').innerText.trim() : '';
+        const priceText = pro.querySelector('h4') ? pro.querySelector('h4').innerText.replace(/[^0-9.]/g, '') : '';
+        const img = pro.querySelector('img') ? pro.querySelector('img').getAttribute('src') : '';
+        pro.setAttribute('data-name', name);
+        pro.setAttribute('data-price', priceText);
+        pro.setAttribute('data-img', img);
+    }
+});
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const pro = this.closest('.pro');
+        const name = pro.getAttribute('data-name');
+        const price = pro.getAttribute('data-price');
+        const img = pro.getAttribute('data-img');
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existing = cart.find(item => item.name === name);
+        if (existing) {
+            existing.qty += 1;
+        } else {
+            cart.push({ name, price, img, qty: 1 });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(`${name} added to cart!`);
+      
+    });
+});
+</script>
+</body>
+</html>
