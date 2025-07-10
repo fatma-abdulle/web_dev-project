@@ -96,7 +96,7 @@ body {
     max-height: 200px;
     overflow-y: auto;
     z-index: 1001;
-    display: none;
+    display: block;
 }
 
 .suggestion-item {
@@ -552,13 +552,13 @@ body {
 
 .social-icons i {
     font-size: 20px;
-    color: #f8c8d4;
+    color: #d54b63;
     cursor: pointer;
     transition: color 0.3s;
 }
 
 .social-icons i:hover {
-    color: #e91e63;
+    color: #ec0b55;
 }
 
 .copyright {

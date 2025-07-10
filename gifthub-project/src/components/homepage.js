@@ -187,14 +187,15 @@ export default function Homepage() {
                                 <div className="product-actions">
                                     <button
                                         className="add-to-cart"
-                                        onClick={() =>
+                                        onClick={() =>{
                                             addToCart({
                                                 id: 'wellness-1',
                                                 name: 'Wellness Gift Basket',
                                                 image: 'LandingGift/download (38).jpeg',
                                                 price: 49.99,
                                             })
-                                        }
+                                            alert('Added to cart!');
+                                        }}
                                     >
                                         <i className="fas fa-gift"></i>
                                     </button>
@@ -217,14 +218,15 @@ export default function Homepage() {
                                 <div className="product-actions">
                                     <button
                                         className="add-to-cart"
-                                        onClick={() =>
+                                        onClick={() =>{
                                             addToCart({
                                                 id: 'chocolate-1',
                                                 name: 'Luxury Chocolate Box',
                                                 image: 'LandingGift/fc39bcb6b75010e028f88555ee9a7588.jpg',
                                                 price: 29.99,
                                             })
-                                        }
+                                            alert('Added to cart!');
+                                        }}
                                     >
                                         <i className="fas fa-gift"></i>
                                     </button>
@@ -247,14 +249,15 @@ export default function Homepage() {
                                 <div className="product-actions">
                                     <button
                                         className="add-to-cart"
-                                        onClick={() =>
+                                        onClick={() =>{
                                             addToCart({
                                                 id: 'candle-1',
                                                 name: 'Scented Candle Set',
                                                 image: 'LandingGift/93b6d4958b67b0a6dc9f1301733576f1.jpg',
                                                 price: 34.99,
                                             })
-                                        }
+                                            alert('Added to cart!');
+                                        }}
                                     >
                                         <i className="fas fa-gift"></i>
                                     </button>
