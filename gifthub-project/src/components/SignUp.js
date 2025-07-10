@@ -1,5 +1,4 @@
 import "../assets/auth.css";
-
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 
@@ -19,7 +18,7 @@ const SignUp = () => {
             users.push(form);
             localStorage.setItem('users', JSON.stringify(users));
             alert('Account created successfully!');
-            navigate('/signin');
+            navigate('/signIn');
         }
     };
 
@@ -54,7 +53,7 @@ const SignUp = () => {
 
                     <button type="submit">Sign Up</button>
                 </form>
-                <p className="switch">Already have an account? <Link to="/signin">Sign In</Link></p>
+                <p className="switch">Already have an account? <Link to="/signIn">Sign In</Link></p>
             </div>
         </section>
     );

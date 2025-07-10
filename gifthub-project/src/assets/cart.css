@@ -1,0 +1,214 @@
+/* -------------------------
+   GLOBAL CART SECTION STYLES
+-------------------------- */
+.cart-section {
+    padding: 24px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+    color: #ED3A6A;
+}
+
+.back-home-btn {
+    display: inline-block;
+    margin: 24px 0 0 24px;
+    color: #ED3A6A;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.back-home-btn i {
+    margin-right: 6px;
+}
+
+/* -------------------------
+   CART ITEM CARD (used in both versions)
+-------------------------- */
+.cart-container,
+#cart-items {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cart-item,
+.cart-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(237, 90, 120, 0.12);
+}
+
+.cart-item img,
+.cart-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 16px;
+}
+
+/* -------------------------
+   PRODUCT INFO
+-------------------------- */
+.item-details,
+.cart-info {
+    flex: 1;
+    margin-left: 16px;
+}
+
+.item-details h3,
+.cart-info h3 {
+    margin: 0 0 6px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.item-details p,
+.cart-info p {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+}
+
+/* -------------------------
+   QUANTITY + ACTIONS
+-------------------------- */
+.quantity,
+.cart-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    gap: 10px;
+}
+
+.quantity select,
+.cart-actions select {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1.5px solid #ED3A6A;
+    font-size: 1em;
+    color: #222;
+}
+
+.remove-btn {
+    background-color: transparent;
+    border: 1px solid #ED3A6A;
+    color: #ED3A6A;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #ED3A6A;
+    color: #fff;
+}
+
+/* -------------------------
+   ITEM TOTAL (Price on right)
+-------------------------- */
+.item-total,
+.cart-card > p {
+    min-width: 80px;
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
+/* -------------------------
+   CART SUMMARY + CHECKOUT
+-------------------------- */
+.cart-summary,
+.order-summary {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(237, 90, 120, 0.18);
+    padding: 24px 32px;
+    margin-top: 32px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #222;
+}
+
+.cart-summary h3,
+.order-summary h3 {
+    margin-top: 0;
+    color: #ED3A6A;
+    font-size: 1.4em;
+    margin-bottom: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.cart-summary p,
+.cart-summary strong,
+.order-summary p,
+.order-summary strong {
+    font-size: 1.1em;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+}
+
+.cart-summary .order-total,
+.cart-summary strong,
+.order-summary .order-total,
+.order-summary strong {
+    font-weight: bold;
+    color: #ED3A6A;
+    font-size: 1.2em;
+    border-top: 1px solid #ED3A6A;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+#checkout-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#checkout-form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border 0.2s;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+#checkout-form input:focus {
+    border-color: #ED3A6A;
+    outline: none;
+}
+
+.checkout-btn {
+    width: 100%;
+    background: #ED3A6A;
+    color: #fff;
+    padding: 14px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.checkout-btn:hover {
+    background: #b81e47;
+    transform: translateY(-2px);
+}

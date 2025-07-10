@@ -1,0 +1,156 @@
+/* ===========================
+   Birthday Page Clean Styles
+   =========================== */
+
+/* Container */
+.birthday-section {
+    text-align: center;
+    padding: 40px 20px;
+    background: #edb6c1;
+}
+
+.birthday-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #df1d49;
+    margin-bottom: 20px;
+}
+
+/* Product Grid */
+.birthday-pro-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Product Card */
+.birthday-pro {
+    width: 230px;
+    background: #fff;
+    border: 1px solid #f4cdd5;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.birthday-pro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.birthday-pro img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.birthday-description {
+    text-align: left;
+    padding: 12px 16px;
+}
+
+.birthday-description span {
+    font-size: 12px;
+    color: #df1d49;
+}
+
+.birthday-description h5 {
+    font-size: 16px;
+    color: #1a1a1a;
+    margin: 6px 0;
+}
+
+.birthday-description .star {
+    color: #EDB6C1;
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.birthday-description h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #edb6c1;
+    margin: 8px 0;
+}
+
+/* Add to Cart Button */
+.birthday-add-to-cart {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #e8f6ea;
+    color: #EDB6C1;
+    font-weight: 500;
+    font-size: 14px;
+    border: 1px solid #cce7d0;
+    border-radius: 50px;
+    padding: 8px 14px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.birthday-add-to-cart:hover {
+    background-color: #EDB6C1;
+    color: #fff;
+    border-color: #EDB6C1;
+}
+
+.birthday-add-to-cart i {
+    font-size: 14px;
+    color: inherit;
+}
+
+/* Back Button */
+.birthday-back-home-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #EDB6C1;
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+}
+
+.birthday-back-home-btn:hover {
+    background-color: #e5a7b4;
+}
+
+.birthday-back-home-btn i {
+    font-size: 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .birthday-pro {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .birthday-pro {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .birthday-pro {
+        width: 100%;
+    }
+}

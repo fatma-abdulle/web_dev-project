@@ -50,7 +50,7 @@ const SignIn = () => {
 
                     <button type="submit">Sign In</button>
                 </form>
-                <p className="switch">Don't have an account? <Link to="/signup">Sign Up</Link></p>
+                <p className="switch">Don't have an account? <Link to="/signUp">Sign Up</Link></p>
             </div>
         </section>
     );

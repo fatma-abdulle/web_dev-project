@@ -1,0 +1,119 @@
+/* Main container */
+.cart-section {
+    padding: 24px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    text-align: center;
+    color: #ED3A6A;
+}
+
+/* Each cart card */
+.cart-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(237, 90, 120, 0.12);
+    margin-bottom: 16px;
+}
+
+/* Product image */
+.cart-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 16px;
+}
+
+/* Info next to image */
+.cart-info {
+    flex: 1;
+    margin-left: 16px;
+}
+
+.cart-info h3 {
+    margin: 0 0 6px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cart-info p {
+    margin: 0;
+    font-size: 1em;
+    color: #666;
+}
+
+/* Dropdown and remove */
+.cart-actions {
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cart-actions select {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1.5px solid #ED3A6A;
+    font-size: 1em;
+    color: #222;
+}
+
+.remove-btn {
+    background-color: transparent;
+    border: 1px solid #ED3A6A;
+    color: #ED3A6A;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #ED3A6A;
+    color: #fff;
+}
+
+/* Price at far right */
+.cart-card > p {
+    min-width: 80px;
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Summary (you can adjust class if needed) */
+.cart-summary {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(237, 90, 120, 0.18);
+    padding: 24px 32px;
+    margin-top: 32px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #222;
+}
+
+.cart-summary p,
+.cart-summary strong {
+    font-size: 1.1em;
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+}
+
+.cart-summary strong {
+    font-weight: bold;
+    color: #ED3A6A;
+    font-size: 1.2em;
+    border-top: 1px solid #ED3A6A;
+    padding-top: 10px;
+    margin-top: 10px;
+}
