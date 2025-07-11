@@ -34,7 +34,8 @@ A modern, responsive e-commerce website for a gift shop with full shopping cart 
 
 ### Installation
 1. Clone or download the project files
-2. Open `index[1].html` in your web browser
+2. Go the the branch MeyReact clone the project 
 3. Start browsing and shopping!
 
 ### File Structure
+The initial static project and the React application are in in the main branch 
