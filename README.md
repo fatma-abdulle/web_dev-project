@@ -1,4 +1,4 @@
-# GiftHub - E-commerce Gift Shop Website
+# GiftHub - E-commerce Gift Shop Website (Go in the Branch MeyReact to find the React application)
 
 A modern, responsive e-commerce website for a gift shop with full shopping cart functionality, user authentication, and product management.
 
