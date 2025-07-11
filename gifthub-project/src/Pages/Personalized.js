@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/Mey.css';
-import { CartContext } from './CartContext';
+import { CartContext } from '../components/CartContext';
 
 const personalizedProducts = [
     { id: 1, name: 'Couple Picture', price: 16, image: '/Custom/e1.jpg', rating: 4 },

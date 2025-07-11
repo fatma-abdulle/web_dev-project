@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import '../assets/cart.css';
 import { Link, useNavigate } from 'react-router-dom';
 import '../assets/StaticCart.css';
-import { CartContext } from './CartContext';
+import { CartContext } from '../components/CartContext';
 
 const Cart = () => {
     const { cartItems, updateQuantity, removeFromCart } = useContext(CartContext);

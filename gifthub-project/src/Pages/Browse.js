@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/Mey.css';
-import { CartContext } from './CartContext';
+import { CartContext } from '../components/CartContext';
+
 
 const categories = {
     teddy: [

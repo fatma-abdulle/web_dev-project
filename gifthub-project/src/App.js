@@ -6,21 +6,21 @@ import "./assets/cart.css";
 import "./assets/StaticCart.css";
 import "./assets/Mey.css";
 import "./assets/Browse.css"
-import Homepage from "./components/homepage";
-import SignIn from "./components/SignIn";
-import SignUp from "./components/SignUp";
-import Cart from "./components/Cart";
-import Checkout from "./components/Checkout";
+import Homepage from "./Pages/homepage";
+import SignIn from "./Pages/SignIn";
+import SignUp from "./Pages/SignUp";
+import Cart from "./Pages/Cart";
+import Checkout from "./Pages/Checkout";
 import StaticCart from "./components/StaticCart";
-import Birthday from "./components/Birthday";
-import Special from "./components/Special";
-import Baby from "./components/Baby";
-import Personalized from "./components/Personalized";
-import HomeLiving from "./components/HomeLiving";
-import Fashion from "./components/Fashion";
-import ChatWithUs from "./components/ChatWithUs";
-import Browse from "./components/Browse";
-import Flower from './components/Flower';
+import Birthday from "./Pages/Birthday";
+import Special from "./Pages/Special";
+import Baby from "./Pages/Baby";
+import Personalized from "./Pages/Personalized";
+import HomeLiving from "./Pages/HomeLiving";
+import Fashion from "./Pages/Fashion";
+import ChatWithUs from "./Pages/ChatWithUs";
+import Browse from "./Pages/Browse";
+import Flower from './Pages/Flower';
 function App() {
     return (
         <CartProvider>

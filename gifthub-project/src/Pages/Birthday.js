@@ -1,20 +1,20 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/Mey.css';
-import { CartContext } from './CartContext';
+import { CartContext } from '../components/CartContext';
 
-const homeLivingProducts = [
-    { id: 1, name: 'Abstract Wall Art', price: 35, image: '/home/h1.jpg', rating: 3 },
-    { id: 2, name: 'Scented Candle Set', price: 20, image: '/home/h2.jpg', rating: 3.5 },
-    { id: 3, name: 'Cozy Knit Blanket', price: 45, image: '/home/h3.jpg', rating: 4 },
-    { id: 4, name: 'Premium Kitchen Tool Set', price: 60, image: '/home/h4.jpg', rating: 3 },
-    { id: 5, name: 'Decorative Throw Pillows (Set of 2)', price: 25, image: '/home/h5.jpg', rating: 4.5 },
-    { id: 6, name: 'Ceramic Plant Pot', price: 18, image: '/home/h6.jpg', rating: 2.5 },
-    { id: 7, name: 'Modern Wall Clock', price: 28, image: '/home/h7.jpg', rating: 4 },
-    { id: 8, name: 'Minimalist Table Lamp', price: 32, image: '/home/h8.jpg', rating: 3.5 },
+const birthdayProducts = [
+    { id: 1, name: 'Chocolate Birthday Cake', price: 25, image: '/birthday/b1.jpg', rating: 4 },
+    { id: 2, name: 'Birthday Balloon Set', price: 10, image: '/birthday/b2.jpg', rating: 3 },
+    { id: 3, name: 'Luxury Gift Box', price: 40, image: '/birthday/b3.jpg', rating: 5 },
+    { id: 4, name: 'Scented Birthday Candle', price: 5, image: '/birthday/b4.jpg', rating: 3 },
+    { id: 5, name: 'Custom Birthday Mug', price: 12, image: '/birthday/b5.jpg', rating: 4 },
+    { id: 6, name: 'Cute Teddy Bear', price: 15, image: '/birthday/b6.jpg', rating: 3 },
+    { id: 7, name: 'Personalized Greeting Card', price: 4, image: '/birthday/b7.jpg', rating: 3 },
+    { id: 8, name: 'Birthday Party Pack', price: 30, image: '/birthday/b8.jpg', rating: 5 },
 ];
 
-const HomeLiving = () => {
+const Birthday = () => {
     const { addToCart } = useContext(CartContext);
 
     const handleAddToCart = (product) => {
@@ -29,19 +29,19 @@ const HomeLiving = () => {
             </Link>
 
             <section id="birthday-products">
-                <h2>Make a House a Home – Home & Living Gifts</h2>
+                <h2>Celebrate with Birthday Gifts</h2>
                 <div className="birthday-pro-container">
-                    {homeLivingProducts.map(product => (
+                    {birthdayProducts.map(product => (
                         <div className="birthday-pro" key={product.id}>
                             <img src={product.image} alt={product.name} />
                             <div className="birthday-description">
-                                <span>Home & Living</span>
+                                <span>Birthday</span>
                                 <h5>{product.name}</h5>
                                 <div className="star">
                                     {Array.from({ length: 5 }, (_, index) => (
                                         <i
                                             key={index}
-                                            className={index < Math.floor(product.rating) ? 'fas fa-star' : (index < product.rating ? 'fas fa-star-half-alt' : 'far fa-star')}
+                                            className={index < product.rating ? 'fas fa-star' : 'far fa-star'}
                                         ></i>
                                     ))}
                                 </div>
@@ -61,4 +61,4 @@ const HomeLiving = () => {
     );
 };
 
-export default HomeLiving;
+export default Birthday;

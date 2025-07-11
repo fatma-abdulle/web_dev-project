@@ -7,6 +7,7 @@ export default function ChatWithUs() {
     const [input, setInput] = useState("");
     const messagesEndRef = useRef(null);
 
+
     let currentUser = "guest";
     if (typeof window !== "undefined") {
         currentUser = localStorage.getItem("currentUser");
@@ -17,6 +18,7 @@ export default function ChatWithUs() {
     }
 
     const storageKey = `chat_${currentUser}`;
+    console.log("storageKey:", storageKey);
 
     useEffect(() => {
         const saved = localStorage.getItem(storageKey);
