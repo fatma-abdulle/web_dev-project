@@ -33,13 +33,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Product pages to search through
     const productPages = [
-        'browse.html',
-        'birthday.html',
-        'babyshower.html',
-        'home&living.html',
-        'special.html',
-        'personalized.html',
-        'fashion.html'
+        '/Browse',
+        '/Birthday',
+        '/Baby',
+        '/HomeLiving',
+        '/Special',
+        '/Personalized',
+        '/Fashion'
     ];
 
     // Cache for storing loaded product data
